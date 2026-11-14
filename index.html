@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>30代の肌、まだ諦めてないでしょ。| BEAUTY NOTE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:        #F4F3F7;
+    --white:     #FFFFFF;
+    --surface:   #FAFAFC;
+    --border:    #E6E3ED;
+    --charcoal:  #2E2B36;
+    --mid:       #7A768A;
+    --light-txt: #A09CB8;
+
+    --purple:    #9B7EC8;
+    --pink:      #E07BA0;
+    --grad:      linear-gradient(120deg, #C9A8E2 0%, #E07BA0 100%);
+    --grad-soft: linear-gradient(120deg, #EEE2F8 0%, #FAE2EE 100%);
+    --accent:    #B56FC0;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--charcoal);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--white);
+    padding: 80px 24px 72px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--grad-soft);
+    opacity: 0.55;
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 420px; height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(197,138,222,0.28) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    position: relative;
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-bottom: 1px solid #D8ADE8;
+    padding-bottom: 4px;
+    margin-bottom: 24px;
+  }
+  .hero h1 {
+    position: relative;
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(26px, 6vw, 46px);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    color: var(--charcoal);
+  }
+  .hero h1 em {
+    font-style: normal;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-sub {
+    position: relative;
+    font-size: 14px;
+    color: var(--mid);
+    max-width: 480px;
+    margin: 0 auto 36px;
+    line-height: 1.9;
+  }
+  .hero-scroll {
+    position: relative;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--light-txt);
+    text-transform: uppercase;
+  }
+
+  /* ── INTRO ── */
+  .intro-wrap {
+    background: var(--white);
+    padding: 64px 24px;
+  }
+  .intro {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .intro-quote {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(17px, 4vw, 22px);
+    line-height: 1.75;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+  }
+  .intro-quote span {
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+  }
+  .intro-body {
+    font-size: 13.5px;
+    color: var(--mid);
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* ── ROUTINE FLOW ── */
+  .routine-section {
+    background: var(--grad-soft);
+    padding: 52px 24px 48px;
+    text-align: center;
+  }
+  .routine-section h2 {
+    font-family: 'Noto Serif JP', serif;
+    color: var(--charcoal);
+    font-size: 17px;
+    letter-spacing: 0.08em;
+    margin-bottom: 28px;
+  }
+  .routine-flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .flow-step {
+    background: var(--white);
+    border: 1px solid var(--border);
+    color: var(--charcoal);
+    padding: 7px 14px;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(155,126,200,0.08);
+  }
+  .flow-arrow {
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 15px;
+    flex-shrink: 0;
+    font-weight: 700;
+  }
+
+  /* ── PRODUCTS ── */
+  .products-section {
+    padding: 72px 24px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .section-header {
+    text-align: center;
+    margin-bottom: 52px;
+  }
+  .section-header h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(21px, 5vw, 30px);
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: var(--charcoal);
+  }
+  .section-header p {
+    font-size: 13px;
+    color: var(--mid);
+  }
+
+  .product-card {
+    background: var(--white);
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 28px;
+    align-items: start;
+    padding: 32px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 16px rgba(155,126,200,0.07);
+    border: 1px solid var(--border);
+  }
+
+  .product-img-wrap {
+    position: relative;
+  }
+  .product-img-wrap img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+  }
+  .product-num {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 28px;
+    height: 28px;
+    background: var(--grad);
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(176,111,192,0.35);
+  }
+
+  .product-badge {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    background: var(--grad-soft);
+    color: var(--accent);
+    padding: 3px 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    border-radius: 20px;
+    border: 1px solid #E0C8F0;
+  }
+  .product-name {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(14px, 3vw, 17px);
+    font-weight: 700;
+    line-height: 1.45;
+    margin-bottom: 4px;
+    color: var(--charcoal);
+  }
+  .product-type {
+    font-size: 11px;
+    color: var(--light-txt);
+    margin-bottom: 14px;
+    letter-spacing: 0.04em;
+  }
+  .product-comment {
+    font-size: 13.5px;
+    line-height: 1.85;
+    color: var(--charcoal);
+    margin-bottom: 18px;
+    border-left: 3px solid transparent;
+    border-image: var(--grad) 1;
+    padding-left: 14px;
+  }
+  .product-price {
+    font-size: 13px;
+    color: var(--mid);
+    margin-bottom: 16px;
+  }
+  .product-price strong {
+    color: var(--charcoal);
+    font-size: 17px;
+  }
+
+  .btn-rakuten {
+    display: inline-block;
+    background: var(--grad);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 10px 24px;
+    border-radius: 24px;
+    transition: opacity 0.2s, box-shadow 0.2s;
+    box-shadow: 0 3px 12px rgba(176,111,192,0.3);
+  }
+  .btn-rakuten:hover { opacity: 0.85; box-shadow: 0 5px 18px rgba(176,111,192,0.45); }
+
+  /* ── TOTAL ── */
+  .total-section {
+    background: var(--grad);
+    color: var(--white);
+    padding: 64px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .total-section::before {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    pointer-events: none;
+  }
+  .total-section h3 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 12px;
+  }
+  .total-price {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(36px, 9vw, 56px);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 14px;
+  }
+  .total-note {
+    font-size: 12px;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 32px;
+    line-height: 1.8;
+  }
+  .total-comment {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(15px, 3.5vw, 19px);
+    line-height: 1.8;
+    max-width: 460px;
+    margin: 0 auto;
+    color: rgba(255,255,255,0.92);
+  }
+  .total-comment em {
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  /* ── BRAND DIVIDER ── */
+  .brand-divider { height: 28px; }
+
+  /* ── FOOTER ── */
+  .lp-footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    color: var(--light-txt);
+    padding: 32px 24px;
+    text-align: center;
+    font-size: 11px;
+    line-height: 2;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 560px) {
+    .product-card {
+      grid-template-columns: 90px 1fr;
+      gap: 16px;
+      padding: 24px 20px;
+    }
+    .product-num { width: 24px; height: 24px; font-size: 11px; top: -8px; left: -8px; }
+  }
+
+  /* TEXT-MOTION v2 (文字だけ・1文字ずつ浮かぶ・光の帯・✦) */
+  .tm-js .tm-h{ position:relative; }
+  .tm-js .tm-c{ display:inline-block; }
+  .tm-js .tm-w{ display:inline-block; white-space:nowrap; }
+  .tm-js .tm-u{ display:inline-block; }
+  .tm-js .tm-h:not(.tm-on) .tm-c, .tm-js .tm-h:not(.tm-on) .tm-u{ opacity:0; }
+  .tm-js .tm-h.tm-on .tm-c{
+    background-image:linear-gradient(100deg, currentColor 0%, currentColor 34%, #F3DFA8 40%, #FFFFFF 46%, #F0C27A 52%, #EDB3C2 58%, currentColor 64%, currentColor 100%);
+    background-size:300% 100%; background-position:100% 0;
+    -webkit-background-clip:text; background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:tm-rise .9s cubic-bezier(.22,.61,.36,1) calc(var(--i,0)*.05s) both,
+              tm-glint 4.2s linear calc(var(--n,0)*.05s + 1s + var(--g,0s)) infinite;
+  }
+  .tm-js .tm-h.tm-on .tm-c.tm-n{
+    background-image:none; -webkit-text-fill-color:currentColor;
+    animation:tm-rise .9s cubic-bezier(.22,.61,.36,1) calc(var(--i,0)*.05s) both;
+  }
+  .tm-js .tm-h.tm-on .tm-u{ animation:tm-rise .9s cubic-bezier(.22,.61,.36,1) calc(var(--i,0)*.05s) both; }
+  .tm-js .tm-h.tm-on:not(.tm-live) .tm-c{ animation-play-state:running, paused; }
+  @keyframes tm-rise{ from{opacity:0; transform:translateY(.7em)} to{opacity:1; transform:none} }
+  @keyframes tm-glint{ 0%{background-position:100% 0} 17%,100%{background-position:0% 0} }
+  .tm-js .tm-s{
+    position:absolute; left:0; top:0; margin:-.5em 0 0 -.5em; pointer-events:none; line-height:1;
+    font-size:var(--sz,.7em); font-weight:400; font-style:normal;
+    color:#D9B66A; -webkit-text-fill-color:#D9B66A; text-shadow:0 0 .6em rgba(240,200,120,.95); opacity:0;
+  }
+  .tm-js .tm-s::before{ content:'\2726'; }
+  .tm-js .tm-h.tm-on .tm-s{ animation:tm-twinkle var(--sp,5s) ease-in-out var(--sd,1.5s) infinite; }
+  .tm-js .tm-h.tm-on:not(.tm-live) .tm-s{ animation-play-state:paused; }
+  @keyframes tm-twinkle{ 0%,52%,100%{opacity:0; transform:scale(.4) rotate(0)} 68%{opacity:1; transform:scale(1.15) rotate(25deg)} 84%{opacity:.45; transform:scale(.8) rotate(45deg)} }
+  .tm-js .tm-p:not(.tm-on){ opacity:0; transform:translateY(10px); }
+  .tm-js .tm-p{ transition:opacity .9s ease var(--tm-d,0s), transform .9s ease var(--tm-d,0s); }
+  .tm-js .tm-p.tm-on{ animation:tm-breathe 7s ease-in-out calc(var(--tm-d,0s) + 1.5s) infinite alternate; }
+  .tm-js .tm-p.tm-on:not(.tm-live){ animation-play-state:paused; }
+  @keyframes tm-breathe{ from{filter:brightness(1) saturate(1)} to{filter:brightness(1.09) saturate(1.12)} }
+  @media (prefers-reduced-motion: reduce){
+    .tm-js .tm-h .tm-c, .tm-js .tm-h .tm-u, .tm-js .tm-p{ opacity:1 !important; transform:none !important; transition:none !important; animation:none !important; filter:none !important; }
+    .tm-js .tm-h.tm-on .tm-c{ background-image:none; -webkit-text-fill-color:currentColor; }
+    .tm-js .tm-s{ display:none; }
+  }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PH0C9BXW90"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PH0C9BXW90');
+</script>
+<script>try{if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('tm-js')}catch(e){}</script>
+</head>
+<body>
+
+<section class="hero">
+  <p class="hero-eyebrow">Beauty Note — Skincare Edit</p>
+  <h1>30代の肌、<br>まだ<em>諦めてない</em>でしょ。</h1>
+  <p class="hero-sub">毎朝5分のルーティンを変えるだけで、ベースメイクの仕上がりは別物になる。知ってた？</p>
+  <p class="hero-scroll">scroll ↓</p>
+</section>
+
+<div class="intro-wrap">
+  <div class="intro">
+    <p class="intro-quote">「ファンデが崩れる」って言う前に、<br><span>土台を疑いなさい。</span></p>
+    <p class="intro-body">ベースメイクの崩れの原因、ほとんどは乾燥です。高いファンデを買う前に、まず朝の保湿を見直しなさい。定番のSK-IIに加えて、今月人気のデパコスも3ブランド、まとめて教えてあげるわ。</p>
+  </div>
+</div>
+
+<section class="routine-section">
+  <h2>今日から使う、朝のルーティン</h2>
+  <div class="routine-flow">
+    <div class="flow-step">洗顔</div>
+    <span class="flow-arrow">→</span>
+    <div class="flow-step">① 化粧水</div>
+    <span class="flow-arrow">→</span>
+    <div class="flow-step">② 美容液</div>
+    <span class="flow-arrow">→</span>
+    <div class="flow-step">③ クリーム</div>
+    <span class="flow-arrow">→</span>
+    <div class="flow-step">④ 下地</div>
+    <span class="flow-arrow">→</span>
+    <div class="flow-step">完成</div>
+  </div>
+</section>
+
+<section class="products-section">
+  <div class="section-header">
+    <h2>これだけ揃えれば<br>いいのよ、4つ。</h2>
+    <p>余計なもの省いて、本当に効くものだけ。おだまり、信じて使いなさい。</p>
+  </div>
+
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <span class="product-num">1</span>
+      <img src="./img/img01.jpg" alt="SK-II フェイシャル トリートメント エッセンス" loading="lazy">
+    </div>
+    <div class="product-info">
+      <span class="product-badge">楽天 化粧水1位 2025</span>
+      <p class="product-name">フェイシャル トリートメント エッセンス</p>
+      <p class="product-type">化粧水 — ピテラ™約90%以上配合</p>
+      <p class="product-comment">SK-IIといえばこれ、って知らないの？ピテラ™をこれでもかと詰め込んだ定番中の定番。キメが整うって、こういうことよ。</p>
+      <p class="product-price">75mL <strong>¥12,650</strong>〜</p>
+      <a class="btn-rakuten" href="https://hb.afl.rakuten.co.jp/ichiba/5543a2ec.1376020d.5543a2ed.251aa9ea/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsk-ii%2Ffte_230-sgl%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow">楽天で見る</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <span class="product-num">2</span>
+      <img src="./img/img02.jpg" alt="SK-II ジェノプティクス インフィニットオーラ エッセンス" loading="lazy">
+    </div>
+    <div class="product-info">
+      <span class="product-badge">医薬部外品 — 美白有効成分配合</span>
+      <p class="product-name">ジェノプティクス インフィニットオーラ エッセンス</p>
+      <p class="product-type">美容液 — 8つの効果・20以上の学術論文</p>
+      <p class="product-comment">シミ・シワ・くすみ・毛穴、全部まとめて面倒見てくれる美容液。30年の研究があるの、医薬部外品なの。文句ある？</p>
+      <p class="product-price">30mL <strong>¥22,000</strong>〜</p>
+      <a class="btn-rakuten" href="https://hb.afl.rakuten.co.jp/ichiba/5543a2ec.1376020d.5543a2ed.251aa9ea/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsk-ii%2Fgie%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow">楽天で見る</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <span class="product-num">3</span>
+      <img src="./img/img03.jpg" alt="SK-II スキンパワー リニュー エアリークリーム" loading="lazy">
+    </div>
+    <div class="product-info">
+      <span class="product-badge">朝メイク前に使えるエアリータイプ</span>
+      <p class="product-name">スキンパワー リニュー エアリークリーム</p>
+      <p class="product-type">クリーム — 混合肌・普通肌向け</p>
+      <p class="product-comment">重いクリームが苦手なあなた向けのさらっとタイプ。これ塗ってからファンデのると、全然違うから。信じなくていいけど、後で絶対思い出すわよ。</p>
+      <p class="product-price">50g <strong>¥18,700</strong>〜</p>
+      <a class="btn-rakuten" href="https://hb.afl.rakuten.co.jp/ichiba/5543a2ec.1376020d.5543a2ed.251aa9ea/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsk-ii%2Fspc-rn%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow">楽天で見る</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <span class="product-num">4</span>
+      <img src="./img/img04.jpg" alt="SK-II ジェノプティクス CC プライマー" loading="lazy">
+    </div>
+    <div class="product-info">
+      <span class="product-badge">楽天 メイクアップ1位 2年連続</span>
+      <p class="product-name">ジェノプティクス CC プライマー</p>
+      <p class="product-type">CC下地 — SPF50+ / PA++++ / 1本5役</p>
+      <p class="product-comment">日焼け止め・保湿・トーンアップ・下地・ナチュラルカバー、全部これ1本でいいのよ。2年連続1位の実力、レビュー645件・評価4.46。これ以上なにが必要？</p>
+      <p class="product-price">30g <strong>¥9,900</strong></p>
+      <a class="btn-rakuten" href="https://hb.afl.rakuten.co.jp/ichiba/5543a2ec.1376020d.5543a2ed.251aa9ea/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsk-ii%2Fgccr%2F&link_type=hybrid_url&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJoeWJyaWRfdXJsIiwic2l6ZSI6IjI0MHgyNDAiLCJuYW0iOjEsIm5hbXAiOiJyaWdodCIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MSwiYm9yIjoxLCJjb2wiOjEsImJidG4iOjEsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow">楽天で見る</a>
+    </div>
+  </div>
+</section>
+
+<section class="total-section">
+  <h3>4アイテム セット価格目安</h3>
+  <p class="total-price">¥63,250</p>
+  <p class="total-note">各最小サイズで揃えた場合の参考価格（税込）<br>楽天ポイント還元・SPUで実質負担は下がります</p>
+  <p class="total-comment">高い、って思った？<br>毎朝の5分に<em>投資できない人</em>は、<br>10年後の肌を見て後悔するのよ。おだまり。</p>
+</section>
+
+<div class="brand-divider"></div>
+
+<!-- BEAUTY_BRANDS_START -->
+<section class="products-section">
+  <div class="section-header">
+    <h2>Kiehl&#x27;sで揃える<br>今月のベスト4。</h2>
+    <p>Kiehl&#x27;sの化粧水も美容液もクリームも下地も今月はまとめて押さえておきなさい。</p>
+  </div>
+
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <span class="product-num">1</span>
+      <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/kiehls/cabinet/images/packshots/lc250reno.jpg?_ex=300x300" alt="300ポイント対象◆公式 キールズ ハーバル トナー CL アルコールフリー 250ml 125ml 500mL 化粧水 オイルフリー kiehl&#x27;s kiehls 送料無料 ギフト ラッピング 肌荒れ にきび スキンケア 乾燥 敏感肌 乾燥肌 毛穴 赤み 保湿 メンズ 男性" loading="lazy">
+    </div>
+    <div class="product-info">
+      <span class="product-badge">楽天レビュー363件</span>
+      <p class="product-name">300ポイント対象◆公式 キールズ ハーバル トナー CL アルコールフリー 250ml 125ml 500mL 化粧水 オイルフリー kiehl&#x27;s kiehls 送料無料 ギフト ラッピング 肌荒れ にきび スキンケア 乾燥 敏感肌 乾燥肌 毛穴 赤み 保湿 メンズ 男性</p>
+      <p class="product-type">化粧水</p>
+      <p class="product-comment">アルコールフリーなのに肌をちゃんと整えてくれる化粧水を知らないなんてもったいないのよ。</p>
+      <p class="product-price"><strong>¥2,970</strong></p>
+      <a class="btn-rakuten" href="https://hb.afl.rakuten.co.jp/hgc/g00u02pn.vnnmbc8e.g00u02pn.vnnmc181/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkiehls%2F254-2%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fkiehls%2Fi%2F10000019%2F&amp;rafcid=wsc_i_is_effa7dcb-3de9-40e3-a5e8-d975b8d13ed4" target="_blank" rel="nofollow sponsored" onclick="gtag('event','rakuten_click',{'item_code':'kiehls:10000019','brand':'Kiehl\'s','category':'lotion'})">楽天で見る</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <span class="product-num">2</span>
+      <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/kiehls/cabinet/12823851/12823857/14044454/imgrc0152748985.jpg?_ex=300x300" alt="キールズ レチノール美容液 30mL 50mL 10mL セット kiehl&#x27;s kiehls レチノール ギフト 毛穴 しわ たるみ ハリ 保湿 角質 低刺激 クリーム スキンケア セラミド 肌荒れ ニキビ ナイアシンアミド 送料無料" loading="lazy">
+    </div>
+    <div class="product-info">
+      <span class="product-badge">楽天レビュー6,878件</span>
+      <p class="product-name">キールズ レチノール美容液 30mL 50mL 10mL セット kiehl&#x27;s kiehls レチノール ギフト 毛穴 しわ たるみ ハリ 保湿 角質 低刺激 クリーム スキンケア セラミド 肌荒れ ニキビ ナイアシンアミド 送料無料</p>
+      <p class="product-type">美容液</p>
+      <p class="product-comment">敏感肌でも使えるレチノールで毛穴とハリを攻めるならこれ一択よ。</p>
+      <p class="product-price"><strong>¥3,520</strong></p>
+      <a class="btn-rakuten" href="https://hb.afl.rakuten.co.jp/hgc/g00u02pn.vnnmbc8e.g00u02pn.vnnmc181/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkiehls%2Fww0124kie%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fkiehls%2Fi%2F10000083%2F&amp;rafcid=wsc_i_is_effa7dcb-3de9-40e3-a5e8-d975b8d13ed4" target="_blank" rel="nofollow sponsored" onclick="gtag('event','rakuten_click',{'item_code':'kiehls:10000083','brand':'Kiehl\'s','category':'essence'})">楽天で見る</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <span class="product-num">3</span>
+      <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/kiehls/cabinet/12823851/12823857/14044454/imgrc0152749003.jpg?_ex=300x300" alt="キールズ クリーム UFC 28mL 50mL 125mL 150mL セット レフィル スキンケア フェイスクリーム 乾燥 しっとり 肌荒れ うるおい 潤い 顔 誕生日 べたつかない 乳液 化粧品 kiehl&#x27;s kiehls ギフト クリーム 敏感肌" loading="lazy">
+    </div>
+    <div class="product-info">
+      <span class="product-badge">楽天レビュー3,371件</span>
+      <p class="product-name">キールズ クリーム UFC 28mL 50mL 125mL 150mL セット レフィル スキンケア フェイスクリーム 乾燥 しっとり 肌荒れ うるおい 潤い 顔 誕生日 べたつかない 乳液 化粧品 kiehl&#x27;s kiehls ギフト クリーム 敏感肌</p>
+      <p class="product-type">クリーム</p>
+      <p class="product-comment">ダメージケアしながら一日中うるおうのに、べたつかないなんて、キールズの一番のクリームを使わない手はないのよ</p>
+      <p class="product-price"><strong>¥2,970</strong></p>
+      <a class="btn-rakuten" href="https://hb.afl.rakuten.co.jp/hgc/g00u02pn.vnnmbc8e.g00u02pn.vnnmc181/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkiehls%2Fjpk00265kie%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fkiehls%2Fi%2F10000021%2F&amp;rafcid=wsc_i_is_effa7dcb-3de9-40e3-a5e8-d975b8d13ed4" target="_blank" rel="nofollow sponsored" onclick="gtag('event','rakuten_click',{'item_code':'kiehls:10000021','brand':'Kiehl\'s','category':'cream'})">楽天で見る</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <span class="product-num">4</span>
+      <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/kiehls/cabinet/12823851/12823861/13017285/imgrc0144817193.jpg?_ex=300x300" alt="キールズ レアアース ポアレス トリートメント 美容液プライマー 30mL 公式 kiehl&#x27;s kiehls 保湿 スキンケア パック 美容液 下地 プライマー 毛穴 クレイ 泥 角質 黒ずみ 角栓 保湿 送料無料 ギフト プレゼント プチギフト" loading="lazy">
+    </div>
+    <div class="product-info">
+      <span class="product-badge">楽天レビュー3件</span>
+      <p class="product-name">キールズ レアアース ポアレス トリートメント 美容液プライマー 30mL 公式 kiehl&#x27;s kiehls 保湿 スキンケア パック 美容液 下地 プライマー 毛穴 クレイ 泥 角質 黒ずみ 角栓 保湿 送料無料 ギフト プレゼント プチギフト</p>
+      <p class="product-type">下地</p>
+      <p class="product-comment">テカリと乾燥の堂々巡りはこの美容液の下地で終わらせなさいな</p>
+      <p class="product-price"><strong>¥4,950</strong></p>
+      <a class="btn-rakuten" href="https://hb.afl.rakuten.co.jp/hgc/g00u02pn.vnnmbc8e.g00u02pn.vnnmc181/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fkiehls%2Fww0177kie%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fkiehls%2Fi%2F10000234%2F&amp;rafcid=wsc_i_is_effa7dcb-3de9-40e3-a5e8-d975b8d13ed4" target="_blank" rel="nofollow sponsored" onclick="gtag('event','rakuten_click',{'item_code':'kiehls:10000234','brand':'Kiehl\'s','category':'base'})">楽天で見る</a>
+    </div>
+  </div>
+</section>
+
+<section class="total-section">
+  <h3>4アイテム セット価格目安</h3>
+  <p class="total-price">¥14,410</p>
+  <p class="total-note">各商品の楽天市場価格の合計（税込）<br>楽天ポイント還元・SPUで実質負担は下がります</p>
+  <p class="total-comment">Kiehl'sを4点まとめて揃えるなんて、迷いがないのね。あとは<em>使い切るまで</em>、手を抜かずに続けなさい。</p>
+</section>
+
+<div class="brand-divider"></div>
+
+<section class="products-section">
+  <div class="section-header">
+    <h2>ELIXIRで揃える<br>今月のベスト4。</h2>
+    <p>ELIXIRの化粧水から下地まで、今月はこれを知らないなんて許さないわよ</p>
+  </div>
+
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <span class="product-num">1</span>
+      <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/105/4901872975105.jpg?_ex=300x300" alt="エリクシール つや玉ミスト 美容液 エイジングケア 保湿 化粧持ちアップ(80ml)" loading="lazy">
+    </div>
+    <div class="product-info">
+      <span class="product-badge">楽天レビュー691件</span>
+      <p class="product-name">エリクシール つや玉ミスト 美容液 エイジングケア 保湿 化粧持ちアップ(80ml)</p>
+      <p class="product-type">化粧水</p>
+      <p class="product-comment">つや玉ミストで保湿も化粧持ちも一度に叶えるのよ、知らないなんて勿体ないわ。</p>
+      <p class="product-price"><strong>¥1,980</strong></p>
+      <a class="btn-rakuten" href="https://hb.afl.rakuten.co.jp/hgc/g00r136n.vnnmb190.g00r136n.vnnmcd73/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4901872975105%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24%2Fi%2F10929577%2F&amp;rafcid=wsc_i_is_effa7dcb-3de9-40e3-a5e8-d975b8d13ed4" target="_blank" rel="nofollow sponsored" onclick="gtag('event','rakuten_click',{'item_code':'rakuten24:10929577','brand':'ELIXIR','category':'lotion'})">楽天で見る</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <span class="product-num">2</span>
+      <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/yayoi-cosme/cabinet/08015879/10895448/imgrc0099446871.jpg?_ex=300x300" alt="＼11/1が買い時! P10倍確定+最大1000円OFF／24.9.21new! エリクシール シュペリエル ザ セラム aa 50mL" loading="lazy">
+    </div>
+    <div class="product-info">
+      <span class="product-badge">楽天レビュー611件</span>
+      <p class="product-name">＼11/1が買い時! P10倍確定+最大1000円OFF／24.9.21new! エリクシール シュペリエル ザ セラム aa 50mL</p>
+      <p class="product-type">美容液</p>
+      <p class="product-comment">つや玉で名高いエリクシールの美容液よ理想の肌が欲しいなら黙って試しなさい</p>
+      <p class="product-price"><strong>¥8,910</strong></p>
+      <a class="btn-rakuten" href="https://hb.afl.rakuten.co.jp/hgc/g00t3lin.vnnmb52b.g00t3lin.vnnmcbcb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fyayoi-cosme%2F20492%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fyayoi-cosme%2Fi%2F10013327%2F&amp;rafcid=wsc_i_is_effa7dcb-3de9-40e3-a5e8-d975b8d13ed4" target="_blank" rel="nofollow sponsored" onclick="gtag('event','rakuten_click',{'item_code':'yayoi-cosme:10013327','brand':'ELIXIR','category':'essence'})">楽天で見る</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <span class="product-num">3</span>
+      <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/yayoi-cosme/cabinet/07249059/imgrc0115725394.jpg?_ex=300x300" alt="＼11/1が買い時! P10倍確定+最大1000円OFF／25.9.21new! エリクシール シュペリエル レチノパワー リンクルクリーム ba" loading="lazy">
+    </div>
+    <div class="product-info">
+      <span class="product-badge">楽天レビュー3,072件</span>
+      <p class="product-name">＼11/1が買い時! P10倍確定+最大1000円OFF／25.9.21new! エリクシール シュペリエル レチノパワー リンクルクリーム ba</p>
+      <p class="product-type">クリーム</p>
+      <p class="product-comment">薬用レチノール配合のシワ改善クリームよ、年齢を理由に諦めるのはおやめなさい。</p>
+      <p class="product-price"><strong>¥6,600</strong></p>
+      <a class="btn-rakuten" href="https://hb.afl.rakuten.co.jp/hgc/g00t3lin.vnnmb52b.g00t3lin.vnnmcbcb/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fyayoi-cosme%2F21468-m%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fyayoi-cosme%2Fi%2F10014729%2F&amp;rafcid=wsc_i_is_effa7dcb-3de9-40e3-a5e8-d975b8d13ed4" target="_blank" rel="nofollow sponsored" onclick="gtag('event','rakuten_click',{'item_code':'yayoi-cosme:10014729','brand':'ELIXIR','category':'cream'})">楽天で見る</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <span class="product-num">4</span>
+      <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/rakuten24/cabinet/755/4909978265755.jpg?_ex=300x300" alt="エリクシール デーケアレボリューション トーンアップ BE +ca ピュアベージュ(35g)" loading="lazy">
+    </div>
+    <div class="product-info">
+      <span class="product-badge">楽天レビュー167件</span>
+      <p class="product-name">エリクシール デーケアレボリューション トーンアップ BE +ca ピュアベージュ(35g)</p>
+      <p class="product-type">下地</p>
+      <p class="product-comment">乳液みたいに潤って、UVもトーンアップもこれ一本で済ませる下地よ、使わないなんて損するわよ。</p>
+      <p class="product-price"><strong>¥3,410</strong></p>
+      <a class="btn-rakuten" href="https://hb.afl.rakuten.co.jp/hgc/g00r136n.vnnmb190.g00r136n.vnnmcd73/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Frakuten24%2F4909978265755%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Frakuten24%2Fi%2F11387599%2F&amp;rafcid=wsc_i_is_effa7dcb-3de9-40e3-a5e8-d975b8d13ed4" target="_blank" rel="nofollow sponsored" onclick="gtag('event','rakuten_click',{'item_code':'rakuten24:11387599','brand':'ELIXIR','category':'base'})">楽天で見る</a>
+    </div>
+  </div>
+</section>
+
+<section class="total-section">
+  <h3>4アイテム セット価格目安</h3>
+  <p class="total-price">¥20,900</p>
+  <p class="total-note">各商品の楽天市場価格の合計（税込）<br>楽天ポイント還元・SPUで実質負担は下がります</p>
+  <p class="total-comment">ELIXIRを今月4点も揃えるなんて、本気なのね。<em>肌が変わるまで、言い訳せずに続けなさい。</em></p>
+</section>
+
+<div class="brand-divider"></div>
+
+<section class="products-section">
+  <div class="section-header">
+    <h2>SUQQUで揃える<br>今月のベスト4。</h2>
+    <p>SUQQUの化粧水も美容液もクリームも下地も今月はまとめて見ておきなさい、肌が変わるのよ</p>
+  </div>
+
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <span class="product-num">1</span>
+      <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/pureco/cabinet/prc-s-845000/prc-s-8459204944.jpg?_ex=300x300" alt="スック SUQQU ヴィアルム ザ ローション 150ml" loading="lazy">
+    </div>
+    <div class="product-info">
+      <span class="product-badge">楽天レビュー1件</span>
+      <p class="product-name">スック SUQQU ヴィアルム ザ ローション 150ml</p>
+      <p class="product-type">化粧水</p>
+      <p class="product-comment">もっちり濃厚なのにべたつかず肌に吸いつくオイルイン化粧水よ使えばわかるのよ。</p>
+      <p class="product-price"><strong>¥15,950</strong></p>
+      <a class="btn-rakuten" href="https://hb.afl.rakuten.co.jp/hgc/g00pukun.vnnmb6d7.g00pukun.vnnmc117/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpureco%2Fprc-s-8459204944%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fpureco%2Fi%2F10065904%2F&amp;rafcid=wsc_i_is_effa7dcb-3de9-40e3-a5e8-d975b8d13ed4" target="_blank" rel="nofollow sponsored" onclick="gtag('event','rakuten_click',{'item_code':'pureco:10065904','brand':'SUQQU','category':'lotion'})">楽天で見る</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <span class="product-num">2</span>
+      <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/pureco/cabinet/prc-s-868000/prc-s-8683182009.jpg?_ex=300x300" alt="スック SUQQU アクフォンス リファイニング セラム 50ml" loading="lazy">
+    </div>
+    <div class="product-info">
+      <span class="product-badge">楽天レビュー1件</span>
+      <p class="product-name">スック SUQQU アクフォンス リファイニング セラム 50ml</p>
+      <p class="product-type">美容液</p>
+      <p class="product-comment">くすみ肌に澄み透る艶を取り戻したいなら角層まで届くこの美容液を使いなさいよ</p>
+      <p class="product-price"><strong>¥11,880</strong></p>
+      <a class="btn-rakuten" href="https://hb.afl.rakuten.co.jp/hgc/g00pukun.vnnmb6d7.g00pukun.vnnmc117/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fpureco%2Fprc-s-8683182009%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fpureco%2Fi%2F10089241%2F&amp;rafcid=wsc_i_is_effa7dcb-3de9-40e3-a5e8-d975b8d13ed4" target="_blank" rel="nofollow sponsored" onclick="gtag('event','rakuten_click',{'item_code':'pureco:10089241','brand':'SUQQU','category':'essence'})">楽天で見る</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <span class="product-num">3</span>
+      <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/mimori/cabinet/point4/4973167090213.jpg?_ex=300x300" alt="★ポイント10倍・割引クーポン★SUQQU スック プロテクティング デイ クリーム 30g" loading="lazy">
+    </div>
+    <div class="product-info">
+      <span class="product-badge">楽天レビュー3件</span>
+      <p class="product-name">★ポイント10倍・割引クーポン★SUQQU スック プロテクティング デイ クリーム 30g</p>
+      <p class="product-type">クリーム</p>
+      <p class="product-comment">SUQQUのデイクリームをポイント10倍で買えるのに知らないの送料無料だから黙って買いなさい</p>
+      <p class="product-price"><strong>¥6,710</strong></p>
+      <a class="btn-rakuten" href="https://hb.afl.rakuten.co.jp/hgc/g00trifn.vnnmb7b1.g00trifn.vnnmc68d/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fmimori%2F4973167090213%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Fmimori%2Fi%2F10011616%2F&amp;rafcid=wsc_i_is_effa7dcb-3de9-40e3-a5e8-d975b8d13ed4" target="_blank" rel="nofollow sponsored" onclick="gtag('event','rakuten_click',{'item_code':'mimori:10011616','brand':'SUQQU','category':'cream'})">楽天で見る</a>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <div class="product-img-wrap">
+      <span class="product-num">4</span>
+      <img src="https://thumbnail.image.rakuten.co.jp/@0_mall/arianakosume/cabinet/main-ariana/4973167536582-ra-rk1.jpg?_ex=300x300" alt="SUQQU スック ザ プライマー 本体 30g / 0.5g サンプル お試し 化粧下地 ツヤ 保湿 なめらか ベースメイク カバー 保湿力 メイク下地 人気化粧下地 SPF15・PA+ 送料無料" loading="lazy">
+    </div>
+    <div class="product-info">
+      <span class="product-badge">楽天レビュー9件</span>
+      <p class="product-name">SUQQU スック ザ プライマー 本体 30g / 0.5g サンプル お試し 化粧下地 ツヤ 保湿 なめらか ベースメイク カバー 保湿力 メイク下地 人気化粧下地 SPF15・PA+ 送料無料</p>
+      <p class="product-type">下地</p>
+      <p class="product-comment">軽い付け心地のままツヤも保湿も叶えるのよ、ファンデの仕上がりを整えたいならこれを選びなさい。</p>
+      <p class="product-price"><strong>¥3,990</strong></p>
+      <a class="btn-rakuten" href="https://hb.afl.rakuten.co.jp/hgc/g00t269n.vnnmb51a.g00t269n.vnnmc4b1/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Farianakosume%2F4973167536582-ra%2F&amp;m=http%3A%2F%2Fm.rakuten.co.jp%2Farianakosume%2Fi%2F10008191%2F&amp;rafcid=wsc_i_is_effa7dcb-3de9-40e3-a5e8-d975b8d13ed4" target="_blank" rel="nofollow sponsored" onclick="gtag('event','rakuten_click',{'item_code':'arianakosume:10008191','brand':'SUQQU','category':'base'})">楽天で見る</a>
+    </div>
+  </div>
+</section>
+
+<section class="total-section">
+  <h3>4アイテム セット価格目安</h3>
+  <p class="total-price">¥38,530</p>
+  <p class="total-note">各商品の楽天市場価格の合計（税込）<br>楽天ポイント還元・SPUで実質負担は下がります</p>
+  <p class="total-comment">SUQQUを4点まとめて揃えるなんて、見る目はあるじゃない。でも本当の変化は<em>毎日続けた</em>人にしか来ないのよ。</p>
+</section>
+<!-- BEAUTY_BRANDS_END -->
+
+<footer class="lp-footer">
+  <p>SK-IIは定番として固定、その他のブランドは楽天市場のランキングをもとに毎月入れ替えています。</p>
+  <p>本ページはアフィリエイトリンクを含みます。</p>
+  <p style="margin-top: 6px;">© BEAUTY NOTE</p>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  if(!root.classList.contains('tm-js'))return;
+  try{
+    var H=Array.prototype.slice.call(document.querySelectorAll('.sec-title,.hero h1,.routine-section h2'));
+    var ph=document.querySelector('.products-section h2'); if(ph)H.push(ph);
+    var P=Array.prototype.slice.call(document.querySelectorAll('.sec-desc,.hero-sub,.intro-quote'));
+    function skip(el){return el.closest('.rakuten-grid,.rakuten-card')||(el.classList.contains('sec-desc')&&el.closest('#rakuten'));}
+    var EMO; try{EMO=new RegExp('[\\p{Extended_Pictographic}\\u2726]','u');}catch(e){EMO=/[☀-➿\uD83C-\uDBFF]/;}
+    function mk(ch,st){
+      var s=document.createElement('span'); s.className='tm-c'+(EMO.test(ch)?' tm-n':''); s.textContent=ch;
+      s.style.setProperty('--i',st.c++); return s;
+    }
+    function wrapText(n,st){
+      var toks=n.nodeValue.split(/(\s+)/), fr=document.createDocumentFragment();
+      toks.forEach(function(t){
+        if(!t)return;
+        if(/^\s+$/.test(t)){fr.appendChild(document.createTextNode(t));return;}
+        var chars=[]; Array.from(t).forEach(function(c){
+          if(chars.length&&(c==='️'||c==='‍'||chars[chars.length-1].slice(-1)==='‍'))chars[chars.length-1]+=c; else chars.push(c);
+        });
+        var host=fr;
+        if(/^[\x21-\x7e]+$/.test(t)){host=document.createElement('span');host.className='tm-w';fr.appendChild(host);}
+        chars.forEach(function(c){host.appendChild(mk(c,st));});
+      });
+      n.parentNode.replaceChild(fr,n);
+    }
+    function walk(node,st){
+      Array.prototype.slice.call(node.childNodes).forEach(function(n){
+        if(n.nodeType===3){wrapText(n,st);}
+        else if(n.nodeType===1){
+          if(/^(BR|IMG|SVG|SCRIPT|STYLE)$/i.test(n.tagName))return;
+          var cs=getComputedStyle(n);
+          if(cs.webkitBackgroundClip==='text'||cs.backgroundClip==='text'){
+            n.classList.add('tm-u'); n.style.setProperty('--i',st.c); st.c+=(n.textContent||'').length; return;
+          }
+          walk(n,st);
+        }
+      });
+    }
+    var sparks=new Map();
+    function prep(el,k){
+      var label=el.textContent; var st={c:0};
+      walk(el,st);
+      el.setAttribute('aria-label',label);
+      el.style.setProperty('--n',st.c);
+      var list=[];
+      var a=document.createElement('span'); a.className='tm-s'; a.setAttribute('aria-hidden','true');
+      a.style.setProperty('--sz',(0.6+(k%3)*0.15)+'em'); a.style.setProperty('--sp',(4+(k%4)*0.5)+'s'); a.style.setProperty('--sd',(1.6+(k%4)*1.1)+'s');
+      el.appendChild(a); list.push({el:a,f:0.2+(k%3)*0.08,top:true});
+      if(k%3!==2){
+        var b=document.createElement('span'); b.className='tm-s'; b.setAttribute('aria-hidden','true');
+        b.style.setProperty('--sz',(0.9-(k%3)*0.15)+'em'); b.style.setProperty('--sp',(5+(k%3)*0.5)+'s'); b.style.setProperty('--sd',(3.9+(k%4)*0.9)+'s');
+        el.appendChild(b); list.push({el:b,f:0.78+(k%2)*0.08,top:false});
+      }
+      sparks.set(el,list);
+    }
+    function place(el){
+      var r=el.getBoundingClientRect(), w=r.width||1;
+      var cs=el.querySelectorAll('.tm-c'); if(!cs.length)return;
+      cs.forEach(function(c){
+        var x=c.getBoundingClientRect().left-r.left;
+        c.style.setProperty('--g',(Math.max(0,Math.min(1,x/w))*1.8).toFixed(2)+'s');
+      });
+      (sparks.get(el)||[]).forEach(function(s){
+        var c=cs[Math.min(cs.length-1,Math.floor(cs.length*s.f))].getBoundingClientRect();
+        s.el.style.left=(c.left-r.left+c.width/2)+'px';
+        s.el.style.top=(s.top?(c.top-r.top+c.height*0.1):(c.top-r.top+c.height*0.95))+'px';
+      });
+    }
+    var io=new IntersectionObserver(function(es){
+      var d=0;
+      es.forEach(function(e){
+        if(!e.isIntersecting)return;
+        var t=e.target;
+        if(t.classList.contains('tm-h')){place(t);}
+        else{t.style.setProperty('--tm-d',(d*0.25)+'s');d++;}
+        t.classList.add('tm-on'); io.unobserve(t);
+      });
+    },{threshold:0.15});
+    var live=new IntersectionObserver(function(es){
+      es.forEach(function(e){e.target.classList.toggle('tm-live',e.isIntersecting);});
+    },{threshold:0});
+    H.forEach(function(el,i){if(skip(el))return;el.classList.add('tm-h');prep(el,i);io.observe(el);live.observe(el);});
+    P.forEach(function(el){if(skip(el))return;el.classList.add('tm-p');io.observe(el);live.observe(el);});
+  }catch(err){root.classList.remove('tm-js');}
+})();
+</script>
+</body>
+</html>

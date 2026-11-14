@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://beauty.lil-tplab.tech/sitemap.xml
